@@ -1,0 +1,3 @@
+sub init () {
+	addOverlay ('image.tga', 0, 0);
+}
