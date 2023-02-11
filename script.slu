@@ -1,3 +1,57 @@
+var selection = NULL;
+var markerAction = startTutorial;
+#var questionMarkAnim = anim('.duc', 0, 1);
+#var cursorAnim = anim('.duc', 0);
+
 sub init () {
-	addOverlay ('image.tga', 0, 0);
+	#setFont ('.duc', "ÉABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\"'/?!.,;:()*%& -~`@", 32);
+	setScale (0, 0);
+	onFocusChange (focusChange);
+	onLeftMouse (leftMouse);
+	addStatus ();
+		
+	#setCursor (cursorAnim);
+	#resetMarker(500, 300, 150, 50);
+	addOverlay ('images/main.png', 0, 0);
 }
+
+sub focusChange(whichChange) {
+	selection = whichChange;
+}
+
+sub leftMouse() {
+	if (selection) {
+		if (! callEvent (markerAction, selection)) statusText ("error");
+	}
+}
+
+objectType startTutorial("") {
+}
+
+objectType addGame("") {
+}
+
+objectType questionMark("") {
+}
+
+objectType marker("marker area") {
+	event startTutorial {
+		#resetMarker(0, 0, 0, 0);
+		#addOverlay ('', 0, 0);
+		#markerAction = addGame;	
+	} 
+	event addGame {
+		#resetMarker(0, 0, 0, 0);
+		#addOverlay ('', 0, 0);
+		#markerAction = ;	
+	}	
+}
+
+sub resetMarker(x, y, xw, yh) {
+	blankScreen();
+	removeAllCharacters();
+	removeAllScreenRegions();
+	#addCharacter(questionMark, x, y, questionMarkAnim);
+	addScreenRegion(marker, x, y, x + xw, y + yh, 0, 0, NORTH);
+
+}	

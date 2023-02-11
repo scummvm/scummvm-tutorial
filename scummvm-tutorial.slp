@@ -1,6 +1,6 @@
 [SETTINGS]
-windowname=New SLUDGE Game
-finalfile=Gamedata
+windowname=ScummVM Tutorial
+finalfile=scummvm-tutorial
 language=English
 datafolder=save
 quitmessage=Are you sure you want to quit?
