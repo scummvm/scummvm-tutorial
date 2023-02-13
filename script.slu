@@ -1,3 +1,65 @@
+var selection = NULL;
+var markerAction = startTutorial;
+#var questionMarkAnim = anim('.duc', 0, 1);
+#var cursorAnim = anim('.duc', 0);
+
 sub init () {
-	addOverlay ('images/main.png', 0, 0);
+	#setFont ('.duc', "ÉABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\"'/?!.,;:()*%& -~`@", 32);
+	setScale (0, 0);
+	onFocusChange (focusChange);
+	onLeftMouse (leftMouse);
+	addStatus ();
+	callEvent (prepare, marker);		
+	#setCursor (cursorAnim);
 }
+
+sub focusChange(whichChange) {
+	statusText ("debug: " + whichChange);
+	if (! whichChange) statusText ("debug: nothing is currently selected");
+	selection = whichChange;
+}
+
+sub leftMouse() {
+	if (selection) {
+		if (! callEvent (markerAction, selection)) statusText ("error");
+	}
+}
+
+objectType prepare("") {
+}
+
+objectType startTutorial("") {
+}
+
+objectType addGame("") {
+}
+
+objectType marker("marker area") {
+	event prepare {
+		resetMarker(620, 180, 120, 25);
+		addOverlay ('images/main.png', 0, 0);
+		markerAction = startTutorial;	
+	}
+	event startTutorial {
+		resetMarker(620, 20, 480, 640);
+		#addOverlay ('', 0, 0);
+		markerAction = prepare;	
+	} 
+	event addGame {
+		resetMarker(0, 0, 0, 0);
+		#addOverlay ('', 0, 0);
+		#markerAction = ;	
+	}	
+}
+
+objectType questionMark("") {
+}
+
+sub resetMarker(x, y, xw, yh) {
+	blankScreen();
+	removeAllCharacters();
+	removeAllScreenRegions();
+	#addCharacter(questionMark, x, y, );
+	addScreenRegion(marker, x - xw, y, x, y + yh, 0, 0, NORTH);
+
+}	
