@@ -1,65 +1,135 @@
 var selection = NULL;
-var markerAction = startTutorial;
-#var questionMarkAnim = anim('.duc', 0, 1);
-#var cursorAnim = anim('.duc', 0);
+var gameScreen = "screen_main";
+var gameMode = "mode_basic";
+var button_questionMarkAnim = anim('questionmark.duc', wait(4, 0), wait(4, 1), wait(4, 2), wait(4, 3));
+var button_rectangleHighlightAnim = anim('rectanglehighlight.duc', 0);
+var cursor_scummvmAnim = anim('democursor.duc', 0);
+var cursor_questionMarkAnim = anim('questionmark_small.duc', 0);
 
 sub init () {
-	#setFont ('.duc', "ÉABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\"'/?!.,;:()*%& -~`@", 32);
+	alignStatus (0); 
+	setStatusColour(100, 100, 100);
+	setFont ('demofont_small.duc', "ÉABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\"'/?!.,;:()*%& -~`@", 12);
+	#no perspective scale
 	setScale (0, 0);
+	
 	onFocusChange (focusChange);
 	onLeftMouse (leftMouse);
-	addStatus ();
-	callEvent (prepare, marker);		
-	#setCursor (cursorAnim);
+	onRightMouse (rightMouse);
+
+	callEvent (init_reset, basicEvents);
 }
 
 sub focusChange(whichChange) {
-	statusText ("debug: " + whichChange);
-	if (! whichChange) statusText ("debug: nothing is currently selected");
 	selection = whichChange;
 }
 
+sub rightMouse() {
+	callEvent (init_reset, basicEvents);
+	if (gameMode == "mode_tutorial") {
+		gameMode = "mode_basic";	
+		removeAllCharacters();
+		enableTutorialButton();
+		setCursor (cursor_scummvmAnim);
+	}
+}
+
 sub leftMouse() {
+	#User is in the tutorial game mode 
 	if (selection) {
-		if (! callEvent (markerAction, selection)) statusText ("error");
+		if (gameMode == "mode_tutorial") {
+			if (! callEvent (selection, tutorialEvents)) ; 
+		}
+		#User is not in the tutorial mode
+		if (gameMode == "mode_basic") {
+			if (! callEvent (selection, basicEvents)) ;
+		}
 	}
 }
 
-objectType prepare("") {
+objectType info("") {
 }
 
-objectType startTutorial("") {
+objectType init_reset("") {
 }
 
-objectType addGame("") {
+objectType hotspot_tutorialMode("Tutorial Mode") {
+	event info {
+		statusText ("Switch to get detailed information");
+	}
 }
 
-objectType marker("marker area") {
-	event prepare {
-		resetMarker(620, 180, 120, 25);
+objectType hotspot_start("Button Start") {
+	event info {
+		statusText ("Start selected game");
+	}
+}
+
+objectType hotspot_load("Button Load") {
+	event info {
+		statusText ("Load saved game for selected game");
+	}
+}
+
+objectType hotspot_addGame("Button Add Game") {
+	event info {
+		statusText ("add games to the list");
+	}
+}
+
+sub enableTutorialButton() {
+	addCharacter (hotspot_tutorialMode, 50, 65, button_questionMarkAnim);
+}
+
+sub showHighlights() {
+	if (gameScreen == "screen_main") {
+		addCharacter (visual_mark, 509, 188, button_rectangleHighlightAnim);
+		addCharacter (visual_mark, 509, 113, button_rectangleHighlightAnim);
+		addCharacter (visual_mark, 509, 141, button_rectangleHighlightAnim);
+	}
+	if (gameScreen == "screen_addgame") {
+		addCharacter (visual_mark, 31, 394, button_rectangleHighlightAnim);
+		addCharacter (visual_mark, 379, 394, button_rectangleHighlightAnim);
+		addCharacter (visual_mark, 267, 394, button_rectangleHighlightAnim); 
+	}
+}
+
+objectType basicEvents("") {
+	event hotspot_addGame {
+		gameScreen = "screen_addgame";
+		cleanScreen();
+		addOverlay('images/addgame.png',0,0);
+		#Back to main menu
+		addScreenRegion (init_reset, 266, 394, 376, 418, 0, 0, NORTH);
+		enableTutorialButton();
+	}
+	event init_reset {
+		gameScreen = "screen_main";
+		cleanScreen ();
 		addOverlay ('images/main.png', 0, 0);
-		markerAction = startTutorial;	
+		setCursor (cursor_scummvmAnim);
+		addScreenRegion (hotspot_addGame, 508, 191, 618, 213, 0, 0, NORTH);
+		addScreenRegion (hotspot_start, 508, 113, 618, 135, 0, 0, NORTH);
+		addScreenRegion (hotspot_load, 508, 141, 618, 163, 0, 0, NORTH);
+		enableTutorialButton();
 	}
-	event startTutorial {
-		resetMarker(620, 20, 480, 640);
-		#addOverlay ('', 0, 0);
-		markerAction = prepare;	
-	} 
-	event addGame {
-		resetMarker(0, 0, 0, 0);
-		#addOverlay ('', 0, 0);
-		#markerAction = ;	
-	}	
+	event hotspot_tutorialMode {
+		gameMode = "mode_tutorial";	
+		setCursor (cursor_questionMarkAnim);
+		removeCharacter (hotspot_tutorialMode);
+		showHighlights();
+	}
 }
 
-objectType questionMark("") {
+objectType tutorialEvents("") {	
+} 
+
+objectType visual_mark("") {
 }
 
-sub resetMarker(x, y, xw, yh) {
-	blankScreen();
-	removeAllCharacters();
-	removeAllScreenRegions();
-	#addCharacter(questionMark, x, y, );
-	addScreenRegion(marker, x - xw, y, x, y + yh, 0, 0, NORTH);
+sub cleanScreen() {
+		blankScreen();
+		removeAllCharacters();
+		removeAllScreenRegions();
+}
 
-}	
