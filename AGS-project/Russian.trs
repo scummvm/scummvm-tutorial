@@ -1,0 +1,163 @@
+// AGS TRANSLATION SOURCE FILE
+// Format is alternating lines with original game text and replacement
+// text. If you don't want to translate a line, just leave the following
+// line blank. Lines starting with '//' are comments - DO NOT translate
+// them. Special characters such as [ and %%s symbolise things within the
+// game, so should be left in an appropriate place in the message.
+// 
+// ** Translation settings are below
+// ** Leave them as "DEFAULT" to use the game settings
+// The normal font to use - DEFAULT or font number
+//#NormalFont=DEFAULT
+// The speech font to use - DEFAULT or font number
+//#SpeechFont=DEFAULT
+// Text direction - DEFAULT, LEFT or RIGHT
+//#TextDirection=DEFAULT
+//  
+// ** REMEMBER, WRITE YOUR TRANSLATION IN THE EMPTY LINES, DO
+// ** NOT CHANGE THE EXISTING TEXT.
+scrnshot.pcx
+
+Add Game...
+Добавить игру...
+
+CHARACTER
+Cancel
+Отмена
+
+Add Game...
+
+CHARACTER
+
+Sorry, not now.
+
+Restore
+
+Select a game to restore:
+
+Save
+
+Type a name to save as:
+
+Replace
+
+The save directory is full. You must replace an existing game:
+
+Replace:
+
+With:
+
+Quit
+
+Play
+
+Are you sure you want to quit?
+
+You are carrying nothing.
+
+Talking to yourself is a sign of madness!
+
+You rub your hands up and down your clothes.
+
+Damn, I'm looking good!
+
+No hotspot
+
+Hotspot 2
+
+Hotspot 3
+
+Hotspot 4
+
+Hotspot 5
+
+Hotspot 6
+
+Hotspot 7
+
+Hotspot 8
+
+Hotspot 9
+
+Hotspot 10
+
+Hotspot 11
+
+Hotspot 12
+
+Hotspot 13
+
+Hotspot 14
+
+Hotspot 15
+
+Hotspot 16
+
+Hotspot 17
+
+Hotspot 18
+
+Hotspot 19
+
+Hotspot 20
+
+Hotspot 21
+
+Hotspot 22
+
+Hotspot 23
+
+Hotspot 24
+
+Hotspot 25
+
+Hotspot 26
+
+Hotspot 27
+
+Hotspot 28
+
+Hotspot 29
+
+Hotspot 30
+
+Hotspot 31
+
+Hotspot 32
+
+Hotspot 33
+
+Hotspot 34
+
+Hotspot 35
+
+Hotspot 36
+
+Hotspot 37
+
+Hotspot 38
+
+Hotspot 39
+
+Hotspot 40
+
+Hotspot 41
+
+Hotspot 42
+
+Hotspot 43
+
+Hotspot 44
+
+Hotspot 45
+
+Hotspot 46
+
+Hotspot 47
+
+Hotspot 48
+
+Hotspot 49
+
+Hotspot 1
+
