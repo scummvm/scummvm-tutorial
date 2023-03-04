@@ -1,15 +1,15 @@
 var selection = NULL;
 var gameScreen = "screen_main";
 var gameMode = "mode_basic";
-var button_questionMarkAnim = anim('questionmark.duc', wait(4, 0), wait(4, 1), wait(4, 2), wait(4, 3));
-var button_rectangleHighlightAnim = anim('rectanglehighlight.duc', 0);
-var cursor_scummvmAnim = anim('democursor.duc', 0);
-var cursor_questionMarkAnim = anim('questionmark_small.duc', 0);
+var button_questionMarkAnim = anim('resources/questionmark.duc', 0); 
+var button_rectangleHighlightAnim = anim('resources/rectanglehighlight.duc', 0);
+var cursor_scummvmAnim = anim('resources/democursor.duc', 0);
+var cursor_questionMarkAnim = anim('resources/questionmark_small.duc', 0);
 
 sub init () {
 	alignStatus (0); 
 	setStatusColour(100, 100, 100);
-	setFont ('demofont_small.duc', "ÉABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\"'/?!.,;:()*%& -~`@", 12);
+	setFont ('resources/demofont.duc', "ÉABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\"'/?!.,;:()*%& -~`@", 12);
 	#no perspective scale
 	setScale (0, 0);
 	
