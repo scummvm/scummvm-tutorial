@@ -1,0 +1,208 @@
+// AGS TRANSLATION SOURCE FILE
+// Format is alternating lines with original game text and replacement
+// text. If you don't want to translate a line, just leave the following
+// line blank. Lines starting with '//' are comments - DO NOT translate
+// them. Special characters such as [ and %%s symbolise things within the
+// game, so should be left in an appropriate place in the message.
+// 
+// ** Translation settings are below
+// ** Leave them as "DEFAULT" to use the game settings
+// The normal font to use - DEFAULT or font number
+//#NormalFont=DEFAULT
+// The speech font to use - DEFAULT or font number
+//#SpeechFont=DEFAULT
+// Text direction - DEFAULT, LEFT or RIGHT
+//#TextDirection=DEFAULT
+// Text encoding hint - ASCII or UTF-8
+//#Encoding=ASCII
+//  
+// ** REMEMBER, WRITE YOUR TRANSLATION IN THE EMPTY LINES, DO
+// ** NOT CHANGE THE EXISTING TEXT.
+scrnshot.pcx
+
+German
+
+English
+
+Add Game...
+Ajouter...
+Start
+Demarrer
+Load...
+Charger
+Game Options...
+Options du Jeu...
+Remove Game
+Supprimer
+Global Options...
+Opts Globales...
+About
+A Propos
+Quit
+Quitter
+Cancel
+Annuler
+Change Language
+
+CHARACTER
+
+Sorry, not now.
+
+Restore
+
+Select a game to restore:
+
+Save
+
+Type a name to save as:
+
+Replace
+
+The save directory is full. You must replace an existing game:
+
+Replace:
+
+With:
+
+Play
+
+Are you sure you want to quit?
+
+You are carrying nothing.
+
+Talking to yourself is a sign of madness!
+
+You rub your hands up and down your clothes.
+
+Damn, I'm looking good!
+
+No hotspot
+
+Hotspot 2
+
+Hotspot 3
+
+Hotspot 4
+
+Hotspot 5
+
+Hotspot 6
+
+Hotspot 7
+
+Hotspot 8
+
+Hotspot 9
+
+Hotspot 10
+
+Hotspot 11
+
+Hotspot 12
+
+Hotspot 13
+
+Hotspot 14
+
+Hotspot 15
+
+Hotspot 16
+
+Hotspot 17
+
+Hotspot 18
+
+Hotspot 19
+
+Hotspot 20
+
+Hotspot 21
+
+Hotspot 22
+
+Hotspot 23
+
+Hotspot 24
+
+Hotspot 25
+
+Hotspot 26
+
+Hotspot 27
+
+Hotspot 28
+
+Hotspot 29
+
+Hotspot 30
+
+Hotspot 31
+
+Hotspot 32
+
+Hotspot 33
+
+Hotspot 34
+
+Hotspot 35
+
+Hotspot 36
+
+Hotspot 37
+
+Hotspot 38
+
+Hotspot 39
+
+Hotspot 40
+
+Hotspot 41
+
+Hotspot 42
+
+Hotspot 43
+
+Hotspot 44
+
+Hotspot 45
+
+Hotspot 46
+
+Hotspot 47
+
+Hotspot 48
+
+Hotspot 49
+
+Hotspot 1
+
+Select directory with game data
+Selectionner le repertoire contenant les donnees du jeu
+Show hidden files
+Afficher les fichiers caches
+French
+
+File <%s>
+
+Font n%i
+
+CHNG .trs
+
+File
+
+Font
+
+<%s>
+
+Font %i
+
+Go up
+Remonter
+Choose
+Choisir
+In this new version of ScummVM Android, significant changes were made to the file access system to allow support for modern versions of the Android Operating System.[If you find that your existing added games or custom paths no longer work, please edit those paths and this time use the SAF system to browse to the desired locations. 
+Dans cette nouvelle version de ScummVM pour Android, des modifications importantes ont été apportées au système d'accès aux fichiers afin de permettre la prise en charge des versions récentes du système d'exploitation Android.[Si vous constatez que vos jeux ajoutés ou vos chemins personnalisés ne fonctionnent plus, veuillez modifier ces chemins et utiliser le système SAF pour naviguer vers les emplacements souhaités.
+OK
+
+To do that:[1. For each game whose data is not found, go to the "Paths" tab in the "Game Options" and change the "Game path"[2. Inside the ScummVM file browser, use "Go Up" until you reach the "root" folder where you will see the "<Add a new folder>" option.[3. Choose that, then browse and select the "parent" folder for your games subfolders, e.g. "SD Card > myGames". Click on "Use this folder".[4. Then, a new folder "myGames" will appear on the "root" folder of the ScummVM browser.[5. Browse through this folder to your game data.[[Steps 2 and 3 need to be done only once for all of your games.
+Pour ce faire :[1. Pour chaque jeu dont les données ne sont pas trouvées, allez dans l'onglet "Chemins" dans les "Options du jeu" et modifiez le "Chemin du jeu".[2. A l'intérieur du navigateur de fichiers de ScummVM, utilisez "Remonter" jusqu'à ce que vous atteigniez le dossier "racine" où vous verrez l'option "<Ajouter un nouveau dossier>".[3. Choisissez cette option, puis naviguez et sélectionnez le dossier "parent" pour vos sous-dossiers de jeux, par exemple "SD Card > myGames". Cliquez sur "Utiliser ce dossier".[4. Ensuite, un nouveau dossier "myGames" apparaîtra dans le dossier "racine" du navigateur ScummVM.[5. Naviguez dans ce dossier jusqu'à vos données de jeu.[[Les étapes 2 et 3 ne doivent être effectuées qu'une seule fois pour tous vos jeux.

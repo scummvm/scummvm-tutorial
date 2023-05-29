@@ -1,0 +1,1 @@
+var gamefiles = ['French.tra', 'German.tra', 'Russian.tra', 'scummvm-tutorial.ags', 'acsetup.cfg'];

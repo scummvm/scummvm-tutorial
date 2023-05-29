@@ -13,6 +13,8 @@
 //#SpeechFont=DEFAULT
 // Text direction - DEFAULT, LEFT or RIGHT
 //#TextDirection=DEFAULT
+// Text encoding hint - ASCII or UTF-8
+//#Encoding=ASCII
 //  
 // ** REMEMBER, WRITE YOUR TRANSLATION IN THE EMPTY LINES, DO
 // ** NOT CHANGE THE EXISTING TEXT.
@@ -24,8 +26,39 @@ Add Game...
 CHARACTER
 Cancel
 Отмена
+French
 
-Add Game...
+German
+
+File <%s>
+
+Font n%i
+
+Add Game
+
+Start
+
+Load...
+
+Game Options...
+
+Remove Game
+
+Global Options...
+
+About
+
+Quit
+
+Select directory with game data
+
+Show hidden files
+
+Change Language
+
+File
+
+Font
 
 CHARACTER
 
@@ -46,8 +79,6 @@ The save directory is full. You must replace an existing game:
 Replace:
 
 With:
-
-Quit
 
 Play
 
@@ -160,4 +191,42 @@ Hotspot 48
 Hotspot 49
 
 Hotspot 1
+
+<%s>
+
+Font %i
+
+Go up
+
+Choose
+
+CHNG .trs
+
+OK
+
+In this new version of ScummVM Android, significant changes were made to the file access system to allow support for modern versions of the Android Operating System.
+
+If you find that your existing added games or custom paths no longer work, please edit those paths and this time use the SAF system to browse to the desired locations.
+
+To do that:
+
+1. For each game whose data is not found, go to the "Paths" tab in the "Game Options" and change the "Game path"
+
+2. Inside the ScummVM file browser, use "Go Up" until you reach the "root" folder where you will see the "<Add a new folder>" option.
+
+3. Choose that, then browse and select the "parent" folder for your games subfolders, e.g. "SD Card > myGames". Click on "Use this folder".
+
+4. Then, a new folder "myGames" will appear on the "root" folder of the ScummVM browser.
+
+5. Browse through this folder to your game data.
+
+Steps 2 and 3 need to be done only once for all of your games.
+
+In this new version of ScummVM Android, significant changes were made to the file access system to allow support for modern versions of the Android Operating System.[If you find that your existing added games or custom paths no longer work, please edit those paths and this time use the SAF system to browse to the desired locations.[[To do that:[1. For each game whose data is not found, go to the "Paths" tab in the "Game Options" and change the "Game path"[2. Inside the ScummVM file browser, use "Go Up" until you reach the "root" folder where you will see the "<Add a new folder>" option.[3. Choose that, then browse and select the "parent" folder for your games subfolders, e.g. "SD Card > myGames". Click on "Use this folder".[4. Then, a new folder "myGames" will appear on the "root" folder of the ScummVM browser.[5. Browse through this folder to your game data.[[Steps 2 and 3 need to be done only once for all of your games.
+
+In this new version of ScummVM Android, significant changes were made to the file access system to allow support for modern versions of the Android Operating System.[If you find that your existing added games or custom paths no longer work, please edit those paths and this time use the SAF system to browse to the desired locations.[[To do that:[1. For each game whose data is not found, go to the "Paths" tab in the "Game Options" and change the "Game path"[2. Inside the ScummVM file browser, use "Go Up" until you reach the "root" folder where you will see the "<Add a new folder>" option.[3. Choose that, then browse and select the "parent" folder for your games subfolders, e.g. "SD Card > myGames". Click on "Use this folder".[4. Then, a new folder "myGames" will appear on the "root" folder of the ScummVM browser.[5. Browse through this folder to your game data.[[Steps 2 and 3 need to be done only once for all of your games.[[[[[[test
+
+In this new version of ScummVM Android, significant changes were made to the file access system to allow support for modern versions of the Android Operating System.[If you find that your existing added games or custom paths no longer work, please edit those paths and this time use the SAF system to browse to the desired locations. 
+
+To do that:[1. For each game whose data is not found, go to the "Paths" tab in the "Game Options" and change the "Game path"[2. Inside the ScummVM file browser, use "Go Up" until you reach the "root" folder where you will see the "<Add a new folder>" option.[3. Choose that, then browse and select the "parent" folder for your games subfolders, e.g. "SD Card > myGames". Click on "Use this folder".[4. Then, a new folder "myGames" will appear on the "root" folder of the ScummVM browser.[5. Browse through this folder to your game data.[[Steps 2 and 3 need to be done only once for all of your games.
 
